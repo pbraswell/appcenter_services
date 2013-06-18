@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'rails-api'
 gem 'sqlite3'
+gem 'grape'
+gem 'grape-swagger'
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
