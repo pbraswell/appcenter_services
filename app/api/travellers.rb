@@ -1,9 +1,8 @@
 require 'traveller'
 
 module Travellers
-
+  
   class API < Grape::API
-
     version 'v1', using: :header, vendor: 'traveller'
     format :json
     prefix "api"
@@ -17,7 +16,8 @@ module Travellers
       end
       route_param :id do
         get do
-          Traveller.find(params[:id])
+          traveller = Traveller.find(params[:id])
+          traveller.extend(TravellerRepresenter)
         end
       end 
     end
