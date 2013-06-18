@@ -12,6 +12,7 @@ module TravellerRepresenter
   property :email
 
   link :self do
-    "api/traveller/#{id}"
+    # "/api/traveller/#{id}"
+    self_url
   end
 end
