@@ -6,13 +6,13 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'rails-api'
-gem 'sqlite3'
 gem 'grape'
 gem 'grape-swagger'
 gem 'roar'
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
+gem 'sqlite3', :group => :development
 
 gem 'pg', '0.12.2', :group => :production
 
