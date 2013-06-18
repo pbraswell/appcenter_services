@@ -14,6 +14,8 @@ gem 'roar'
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
 
+gem 'pg', :group => :production
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
