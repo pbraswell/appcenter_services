@@ -15,7 +15,7 @@ gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
 gem 'sqlite3', :group => :development
 
-gem 'pg', '0.12.2', :group => :production
+gem 'mysql2', :group => :production
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

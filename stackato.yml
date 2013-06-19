@@ -1,0 +1,14 @@
+name: myapp
+
+env:
+ BUILDPACK_URL: git://github.com/ActiveState/stackato-buildpack-ruby.git
+
+processes:
+ web: bundle exec rails server
+
+services:
+ mysql: myapp-db
+ # for staging cache
+ myapp-cache: filesystem
+
+mem: 512

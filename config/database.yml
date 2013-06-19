@@ -19,8 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  database: app_center_services
-  host: localhost
-  password:
-  username: postgres
+    adapter: mysql2
+    encoding: utf8
+    database: world
+    pool: 5
+    username: root
+    password: root
+    socket: /tmp/mysql.sock
