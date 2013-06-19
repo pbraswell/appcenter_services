@@ -6,17 +6,18 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'rails-api'
+gem 'rake', '0.9.2.2'
 gem 'grape'
 gem 'grape-swagger'
 gem 'roar'
 gem 'draper'
 gem 'nokogiri', '1.5.10'
-gem 'mysql2'
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
 gem 'sqlite3', :group => :development
 
+gem 'pg', '0.12.2', :group => :production
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
