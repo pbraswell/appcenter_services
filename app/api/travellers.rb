@@ -16,10 +16,8 @@ module Travellers
       end
       route_param :id do
         get do
-          # binding.pry
-          
           traveller = Traveller.find(params[:id])
-          traveller.self_url = "http://#{request.host_with_port}#{request.path_info}"
+          traveller.base_url = "http://#{request.host_with_port}"
           traveller.extend(TravellerRepresenter)
         end
       end 
