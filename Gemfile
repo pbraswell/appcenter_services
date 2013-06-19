@@ -10,6 +10,7 @@ gem 'grape'
 gem 'grape-swagger'
 gem 'roar'
 gem 'draper'
+gem 'nokogiri', '1.5.10'
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
