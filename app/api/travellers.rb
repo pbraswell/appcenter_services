@@ -16,8 +16,7 @@ module Travellers
       end
       route_param :id do
         get do
-          traveller = Traveller.find(params[:id])
-          traveller.base_url = "http://#{request.host_with_port}"
+          traveller = Traveller.find(params[:id]).decorate context: {base_url: "http://#{request.host_with_port}"}
           traveller.extend(TravellerRepresenter)
         end
       end 

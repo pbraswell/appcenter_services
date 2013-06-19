@@ -13,6 +13,7 @@ module TravellerRepresenter
 
   link :self do
     # "/api/traveller/#{id}"
-    base_url+"/api/#{Traveller.model_name.human.downcase.pluralize}/#{id}"
+    # base_url+"/api/#{Traveller.model_name.human.downcase.pluralize}/#{id}"
+    resource_url
   end
 end

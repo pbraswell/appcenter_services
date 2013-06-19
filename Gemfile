@@ -9,6 +9,7 @@ gem 'rails-api'
 gem 'grape'
 gem 'grape-swagger'
 gem 'roar'
+gem 'draper'
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
