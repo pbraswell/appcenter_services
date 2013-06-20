@@ -8,7 +8,5 @@ processes:
 
 services:
  appcenter-db: postgresql 
- # for staging cache
- appcenter-cache: filesystem
 
 mem: 512
