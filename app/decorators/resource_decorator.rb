@@ -2,7 +2,8 @@ class ResourceDecorator < Draper::Decorator
   delegate_all
   
   def resource_url
-    "#{context[:base_url]}/api/"#{model.self.model_name.human.downcase.pluralize}"/#{model.id}"
+    klass = model.class
+    "#{context[:base_url]}/api/#{klass.model_name.human.pluralize.downcase}/#{model.id}"
   end
   
 end
