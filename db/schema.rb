@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618162629) do
+ActiveRecord::Schema.define(:version => 20130621141841) do
+
+  create_table "flights", :force => true do |t|
+    t.time     "departs_at"
+    t.float    "flight_time"
+    t.string   "origin"
+    t.string   "destination"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "travellers", :force => true do |t|
     t.string   "first_name"

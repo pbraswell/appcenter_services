@@ -11,11 +11,13 @@ gem 'grape'
 gem 'grape-swagger'
 gem 'roar'
 gem 'draper'
-gem 'nokogiri', '1.5.10'
+gem 'nokogiri', '1.5.10' # Required to get stackato deploy working
+gem "seedbank"
 
 gem 'rspec-rails',  :group => :development
 gem 'pry-rails', :group => :development
 gem 'sqlite3', :group => :development
+gem 'annotate', :group => :development
 
 gem 'pg', '0.12.2', :group => :production
 
