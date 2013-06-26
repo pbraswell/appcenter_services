@@ -7,13 +7,30 @@ module Flights
     format :json
     prefix "api"
     
+    helpers do
+      
+      def get_flights
+        all = Flight.all
+        @flights = Array.new
+        all.each do |flight|
+          f = flight.decorate context: {base_url: "http://#{request.host_with_port}"}
+          f = f.extend(FlightRepresenter)
+          @flights.push f.to_json
+        end
+        @flights
+      end
+
+    end
+    
     resource :flights do
 
       desc "Return a list of available flights"
-      # GET /api/flights
-      get do
-        Flight.all
+      # GET /api/open/flights
+      get :open do
+        flights = get_flights
       end
+
     end
+    
   end
 end

@@ -1,0 +1,3 @@
+class FlightDecorator < ResourceDecorator
+  
+end
