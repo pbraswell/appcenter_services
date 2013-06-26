@@ -15,7 +15,7 @@ module Flights
         all.each do |flight|
           f = flight.decorate context: {base_url: "http://#{request.host_with_port}"}
           f = f.extend(FlightRepresenter)
-          @flights.push f.to_json
+          @flights.push JSON.parse f.to_json
         end
         @flights
       end
@@ -27,7 +27,7 @@ module Flights
       desc "Return a list of available flights"
       # GET /api/open/flights
       get :open do
-        flights = get_flights
+        get_flights
       end
 
     end
