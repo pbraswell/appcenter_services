@@ -14,10 +14,17 @@ gem 'draper'
 gem 'nokogiri', '1.5.10' # Required to get stackato deploy working
 gem "seedbank"
 
-gem 'rspec-rails',  :group => :development
-gem 'pry-rails', :group => :development
-gem 'sqlite3', :group => :development
-gem 'annotate', :group => :development
+group :development, :test do
+  gem 'sqlite3'
+  gem 'annotate'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'rb-fsevent'
+  gem 'guard-rspec'
+  gem 'growl'
+  gem 'rb-readline', '~> 0.4.2'
+  gem 'pry'
+end
 
 gem 'pg', '0.12.2', :group => :production
 

@@ -14,4 +14,6 @@
 class Flight < ActiveRecord::Base
   attr_accessible :departs_at, :destination, :flight_time, :origin
   validates_presence_of :departs_at, :destination, :flight_time, :origin
+  has_many :itineraries
+  has_many :travellers, :through => :itineraries
 end
