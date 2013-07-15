@@ -20,4 +20,15 @@ describe Flight do
     flight.valid?.should_not be_true
   end
   
+  it 'should respond (via alias) to passaengers instead of travellers' do
+    traveller = Traveller.new :first_name => "first_name", :last_name => "last_name", :email => "foo@example.com"
+    flight = FactoryGirl.create(:flight)
+    itinerary = FactoryGirl.create(:itinerary, :flight => flight, :traveller => traveller)
+    traveller.save!
+    flight.save!
+    itinerary.save!
+    flight.passengers.size.should == 1
+    flight.passengers.first.id.should == traveller.id
+  end
+  
 end
